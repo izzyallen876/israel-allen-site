@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Accessibility statement | Israel Allen</title>
+<meta name="description" content="What lukeanthony.co does for accessibility, and what its known limits are.">
+<meta name="theme-color" content="#020c06">
+<meta name="author" content="Israel Allen">
+<link rel="canonical" href="https://lukeanthony.co/accessibility.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Israel Allen">
+<meta property="og:title" content="Accessibility statement | Israel Allen">
+<meta property="og:description" content="What lukeanthony.co does for accessibility, and what its known limits are.">
+<meta property="og:url" content="https://lukeanthony.co/accessibility.html">
+<meta property="og:image" content="https://lukeanthony.co/assets/img/og-card.jpg">
+<meta property="og:image:alt" content="The words israel allen in large type above a glowing green wireframe grid and a spinning crystal.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<script src="assets/js/theme-init.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bar">
+  <a class="brand" href="index.html">◆ israel allen</a>
+  <nav id="nav" aria-label="Main"><a href="about.html">about</a><a href="work.html">work</a><a href="resume.html">resume</a><a href="lab.html">lab</a><a href="film.html">film</a><a href="contact.html">contact</a></nav>
+  <div class="tools">
+    <button class="pill" id="term-btn" type="button" aria-label="Open the command console">&gt;_</button>
+    <button class="pill" id="theme" type="button" aria-label="Switch between light and dark theme">theme</button>
+    <button class="pill menu-btn" id="menu" type="button" aria-expanded="false" aria-controls="nav">menu</button>
+  </div>
+</div>
+<main id="main">
+<article class="doc">
+<h1>Accessibility statement</h1>
+<p class="meta">Last updated: October 30, 2026</p>
+<div class="short dbox" data-id="SHORT_VERSION"><p>I aim to make this site usable for everyone and to meet WCAG 2.2 level AA. It has not had a formal audit, so there are gaps I know about and may be gaps I don’t. If something stops you, tell me and I’ll fix it.</p></div>
+<h2>What I’ve done</h2>
+<ul>
+<li>Every page except the full-screen film has a skip link, headings in order, labelled landmarks and visible keyboard focus. The film’s controls are real buttons and a slider, and it has its own keyboard shortcuts.</li>
+<li>Everything you can click can also be used from the keyboard. The 3D scenes take the arrow keys to orbit, plus and minus to zoom, and 0 to reset. The timeline on the work page is a slider you can use with the arrow keys.</li>
+<li>Images and drawn art have text descriptions. Decorative art is hidden from screen readers.</li>
+<li>If your device asks for reduced motion, the scrolling ticker, scrambling text and constant animation stop, the home and contact art draw a single still frame, and the film starts paused.</li>
+<li>The film has no speech and its sound is off until you turn it on. Its on-screen captions are real text.</li>
+<li>Light and dark themes are both available, and the theme button remembers your choice on your device only.</li>
+<li>The message form has labelled fields and doesn’t depend on a mouse.</li>
+</ul>
+<h2>Known limits</h2>
+<ul>
+<li>The helmet, crystal and hands are drawn on canvas elements from characters. Screen readers get a short description, not the drawing itself.</li>
+<li>The 3D scenes need WebGL. Without it, the lab shows the original image and a short message instead.</li>
+<li>The film is visual. It has captions for its sections but no audio description.</li>
+<li>Some decorative text uses low-contrast colors on purpose, such as the faint glyphs inside the art. Nothing you need to read is meant to be low contrast, but I haven’t measured every case.</li>
+</ul>
+<h2>Tell me what’s not working</h2>
+<p>Email <a href="mailto:israel.l.allen.28@dartmouth.edu">israel.l.allen.28@dartmouth.edu</a> with the page, what you were trying to do and what you use (browser, device, assistive technology if any). I will do my best to fix it quickly.</p>
+</article>
+</main>
+<footer class="site">
+  <div class="inner">
+    <p>© 2026 Israel Allen. The code is MIT licensed; the text and design are all rights reserved.<br>Press <kbd>/</kbd> to open the console.</p>
+    <nav aria-label="Legal and links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="accessibility.html">Accessibility</a>
+      <a href="credits.html">Credits</a>
+      <a href="https://github.com/izzyallen876" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:israel.l.allen.28@dartmouth.edu">Email</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/js/core.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ghost in the grid, a short film | Israel Allen</title>
+<meta name="description" content="A 38-second short film made entirely of text characters, with synthesised sound. By Israel Allen.">
+<meta name="theme-color" content="#000000">
+<link rel="canonical" href="https://lukeanthony.co/film.html">
+<meta property="og:type" content="video.other">
+<meta property="og:site_name" content="Israel Allen">
+<meta property="og:title" content="Ghost in the grid, a short film">
+<meta property="og:description" content="A 38-second short film made entirely of text characters.">
+<meta property="og:url" content="https://lukeanthony.co/film.html">
+<meta property="og:image" content="https://lukeanthony.co/assets/img/og-card.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/css/film.css">
+</head>
+<body>
+<canvas id="stage" aria-label="An ASCII short film. A weightless man between glowing grids reaches out as a wireframe hand toward a real hand; a starburst bleeds the world into cobalt ink, a samurai helmet develops, and a green crystal rises above it as the man's ghost pours into its eyes." role="img"></canvas>
+<div class="fx scan"></div>
+<div class="fx vig"></div>
+<div class="fx grain"></div>
+
+<div class="top"><span><a class="back" href="index.html">&#9664; israel allen</a>ghost in the grid</span><span id="tc">00:00 / 00:38</span></div>
+<div class="hint" id="hint">press play, or click anywhere to start</div>
+<div class="cap" id="cap" aria-live="off"></div>
+
+<div class="bar" id="bar">
+  <button id="play" type="button" aria-label="Play or pause">pause</button>
+  <input id="seek" type="range" min="0" max="1000" value="0" aria-label="Scrub the film">
+  <button id="snd" type="button" aria-pressed="false" aria-label="Turn sound on or off">sound off</button>
+</div>
+<p class="sr">Space plays or pauses. Left and right arrows skip. M toggles sound. Move the pointer to push the scene around; click to send out a ripple. The film has no spoken words, and its on-screen captions appear at the bottom left.</p>
+<noscript><div class="nojs"><p>This film is drawn by JavaScript.<br>Turn it on to watch, or <a href="index.html">go back to the site</a>.</p></div></noscript>
+<script src="assets/js/film.js"></script>
+</body>
+</html>

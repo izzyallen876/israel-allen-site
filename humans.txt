@@ -1,0 +1,7 @@
+/* TEAM */
+Name: Israel Allen
+Site: https://lukeanthony.co
+Location: Hanover, NH, United States
+
+/* SITE */
+Built by hand with HTML, CSS, JavaScript and WebGL. No frameworks, no libraries.

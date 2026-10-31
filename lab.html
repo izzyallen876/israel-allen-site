@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-world="night">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lab | Israel Allen</title>
+<meta name="description" content="Interactive 3D experiments in WebGL: a heat relief, a pixel monolith and a crystal. Written from scratch with no libraries.">
+<meta name="theme-color" content="#020c06">
+<meta name="author" content="Israel Allen">
+<link rel="canonical" href="https://lukeanthony.co/lab.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Israel Allen">
+<meta property="og:title" content="Lab | Israel Allen">
+<meta property="og:description" content="Interactive 3D experiments in WebGL: a heat relief, a pixel monolith and a crystal. Written from scratch with no libraries.">
+<meta property="og:url" content="https://lukeanthony.co/lab.html">
+<meta property="og:image" content="https://lukeanthony.co/assets/img/og-card.jpg">
+<meta property="og:image:alt" content="The words israel allen in large type above a glowing green wireframe grid and a spinning crystal.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<script src="assets/js/theme-init.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bar">
+  <a class="brand" href="index.html">◆ israel allen</a>
+  <nav id="nav" aria-label="Main"><a href="about.html">about</a><a href="work.html">work</a><a href="resume.html">resume</a><a href="lab.html" aria-current="page">lab</a><a href="film.html">film</a><a href="contact.html">contact</a></nav>
+  <div class="tools">
+    <button class="pill" id="term-btn" type="button" aria-label="Open the command console">&gt;_</button>
+    <button class="pill" id="theme" type="button" aria-label="Switch between light and dark theme">theme</button>
+    <button class="pill menu-btn" id="menu" type="button" aria-expanded="false" aria-controls="nav">menu</button>
+  </div>
+</div>
+<main id="main">
+<section class="phead">
+  <div class="inner">
+    <h1 data-scramble aria-label="Lab">lab</h1>
+    <p class="lead">Three small things in real 3D, written from scratch in WebGL with no libraries. Drag to orbit. Tab to a scene and use the arrow keys if you prefer the keyboard.</p>
+  </div>
+</section>
+
+<section class="spec" id="relief" aria-labelledby="h-relief">
+  <div class="inner">
+    <div class="spec-head">
+      <p class="spec-id">SPECIMEN_01</p>
+      <h2 id="h-relief">Heat relief</h2>
+      <p>A thermal-style street image, lifted into 3D by how hot each pixel is, so the people stand up out of the road. Click to send a pulse through it. Double-click to reset the view.</p>
+    </div>
+    <div class="viewport tall" id="vp-relief">
+      <canvas id="gl-relief" tabindex="0" role="img" aria-label="Interactive 3D relief of the thermal street image. Drag to orbit, arrow keys to orbit, plus and minus to zoom."></canvas>
+      <img class="fallback" src="assets/img/thermal-street.jpg" alt="A thermal-style overhead view of people crossing a striped crosswalk. The people glow red and orange against black, the road stripes are cyan, and yellow boxes with labels like PERSON_01XY are drawn around them.">
+      <p class="vmsg"></p>
+      <p class="vhint">drag to orbit</p>
+    </div>
+    <div class="ctl" role="group" aria-label="Relief controls">
+      <button id="rl-relief" type="button" aria-pressed="true">Relief</button>
+      <button id="rl-flat" type="button" aria-pressed="false">Flat</button>
+      <button id="rl-contour" type="button" aria-pressed="true">Contours</button>
+      <button id="rl-pulse" type="button">Send a pulse</button>
+    </div>
+  </div>
+</section>
+
+<section class="spec" id="monolith" aria-labelledby="h-mono">
+  <div class="inner">
+    <div class="spec-head">
+      <p class="spec-id">SPECIMEN_02</p>
+      <h2 id="h-mono">Pixel monolith</h2>
+      <p>Every pixel of a pixelated portrait becomes a bar, and the darker the pixel, the taller the bar. Move across it and the bars rise to meet you. Click for a shockwave.</p>
+    </div>
+    <div class="viewport tall" id="vp-mono">
+      <canvas id="gl-mono" tabindex="0" role="img" aria-label="Interactive 3D field of colored bars built from a pixelated portrait. Drag to orbit, arrow keys to orbit, plus and minus to zoom."></canvas>
+      <img class="fallback" src="assets/img/pixel-portrait.jpg" alt="A pixelated portrait of one person’s head and shoulders, repeated three times in offset colour layers: yellow and orange on the left, magenta and blue in the middle, cyan and white on the right.">
+      <p class="vmsg"></p>
+      <p class="vhint">drag to orbit</p>
+    </div>
+    <div class="ctl" role="group" aria-label="Monolith controls">
+      <button id="pm-mono" type="button" aria-pressed="true">Monolith</button>
+      <button id="pm-flat" type="button" aria-pressed="false">Flat</button>
+      <button id="pm-wave" type="button" aria-pressed="false">Wave</button>
+    </div>
+  </div>
+</section>
+
+<section class="spec" id="crystal" aria-labelledby="h-crystal">
+  <div class="inner">
+    <div class="spec-head">
+      <p class="spec-id">SPECIMEN_03</p>
+      <h2 id="h-crystal">The crystal, unrendered</h2>
+      <p>The spinning crystal from the home page, this time as real geometry over a scrolling grid. Change how many sides it has and watch the reflection follow.</p>
+    </div>
+    <div class="viewport" id="vp-crystal">
+      <canvas id="gl-crystal" tabindex="0" role="img" aria-label="A glowing green crystal spinning above a scrolling grid, with its reflection below. Drag to orbit."></canvas>
+      <p class="vmsg"></p>
+      <p class="vhint">drag to orbit</p>
+    </div>
+    <div class="ctl" role="group" aria-label="Crystal controls">
+      <button id="cr-spin" type="button" aria-pressed="true">Auto-spin</button>
+      <button id="cr-spark" type="button" aria-pressed="true">Sparkles</button>
+      <label>Sides <input id="cr-sides" type="range" min="3" max="8" step="1" value="4"> <span id="cr-sides-out">4</span></label>
+    </div>
+  </div>
+</section>
+
+<p class="lab-note">Keyboard: tab to a scene, then use the arrow keys to orbit, + and − to zoom and 0 to reset. The two images are shown as artwork, and their status is explained on the <a href="credits.html">credits page</a>.</p>
+</main>
+<footer class="site">
+  <div class="inner">
+    <p>© 2026 Israel Allen. The code is MIT licensed; the text and design are all rights reserved.<br>Press <kbd>/</kbd> to open the console.</p>
+    <nav aria-label="Legal and links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="accessibility.html">Accessibility</a>
+      <a href="credits.html">Credits</a>
+      <a href="https://github.com/izzyallen876" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:israel.l.allen.28@dartmouth.edu">Email</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/js/lab3d.js"></script>
+<script src="assets/js/core.js"></script>
+</body>
+</html>

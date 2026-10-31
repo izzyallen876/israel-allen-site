@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact | Israel Allen</title>
+<meta name="description" content="Contact Israel Allen by email, GitHub or LinkedIn, or write a message right on the page.">
+<meta name="theme-color" content="#020c06">
+<meta name="author" content="Israel Allen">
+<link rel="canonical" href="https://lukeanthony.co/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Israel Allen">
+<meta property="og:title" content="Contact | Israel Allen">
+<meta property="og:description" content="Contact Israel Allen by email, GitHub or LinkedIn, or write a message right on the page.">
+<meta property="og:url" content="https://lukeanthony.co/contact.html">
+<meta property="og:image" content="https://lukeanthony.co/assets/img/og-card.jpg">
+<meta property="og:image:alt" content="The words israel allen in large type above a glowing green wireframe grid and a spinning crystal.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<script src="assets/js/theme-init.js"></script>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bar">
+  <a class="brand" href="index.html">◆ israel allen</a>
+  <nav id="nav" aria-label="Main"><a href="about.html">about</a><a href="work.html">work</a><a href="resume.html">resume</a><a href="lab.html">lab</a><a href="film.html">film</a><a href="contact.html" aria-current="page">contact</a></nav>
+  <div class="tools">
+    <button class="pill" id="term-btn" type="button" aria-label="Open the command console">&gt;_</button>
+    <button class="pill" id="theme" type="button" aria-label="Switch between light and dark theme">theme</button>
+    <button class="pill menu-btn" id="menu" type="button" aria-expanded="false" aria-controls="nav">menu</button>
+  </div>
+</div>
+<main id="main">
+<section class="phead" style="padding-bottom:6px">
+  <div class="inner">
+    <h1 data-scramble aria-label="Contact">contact</h1>
+    <p class="lead">I’m happy to talk research, data, or triathlon. Email is best.</p>
+    <div class="cta">
+      <a class="btn solid" href="mailto:israel.l.allen.28@dartmouth.edu?subject=Hello%20from%20lukeanthony.co">Email me</a>
+      <button class="btn" id="copy" type="button">Copy email</button>
+      <a class="btn" href="https://github.com/izzyallen876" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/israel-allen" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<section class="touch" id="reach" style="margin-top:40px">
+  <div class="inner">
+    <h2>Almost touching</h2>
+    <p>Move your cursor or drag a finger across the stage. The wireframe hand reaches for it, and the spark flares when you click.</p>
+    <div class="stage" id="stage">
+      <canvas class="glyph" id="hands" role="img" aria-label="A green wireframe hand and a human hand reaching toward each other"></canvas>
+      <canvas id="burst" aria-hidden="true"></canvas>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="write">
+  <div class="inner contact-grid">
+    <div>
+      <h2>Write a message</h2>
+      <form class="composer" id="composer" novalidate>
+        <label>Your name <input name="yourname" type="text" autocomplete="name"></label>
+        <label>Your email, so I can reply <input name="from" type="email" autocomplete="email"></label>
+        <label>Message <textarea name="msg" required></textarea></label>
+        <div class="row"><button class="btn solid" type="submit">Open as a draft in my email app</button></div>
+        <p class="fine" id="composer-note" aria-live="polite">Nothing is sent from this page. This opens a draft in your own email app, addressed to me, and you press send there.</p>
+      </form>
+    </div>
+    <ul class="details">
+      <li class="dbox" data-id="CONTACT_01 / EMAIL"><small>Email</small><a href="mailto:israel.l.allen.28@dartmouth.edu">israel.l.allen.28@dartmouth.edu</a></li>
+      <li class="dbox" data-id="CONTACT_02 / GITHUB"><small>GitHub</small><a href="https://github.com/izzyallen876" target="_blank" rel="noopener">github.com/izzyallen876</a></li>
+      <li class="dbox" data-id="CONTACT_03 / LINKEDIN"><small>LinkedIn</small><a href="https://www.linkedin.com/in/israel-allen" target="_blank" rel="noopener">linkedin.com/in/israel-allen</a></li>
+      <li class="dbox" data-id="CONTACT_04 / BASE"><small>Based in</small>Hanover, NH, United States</li>
+    </ul>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="inner">
+    <p>© 2026 Israel Allen. The code is MIT licensed; the text and design are all rights reserved.<br>Press <kbd>/</kbd> to open the console.</p>
+    <nav aria-label="Legal and links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="accessibility.html">Accessibility</a>
+      <a href="credits.html">Credits</a>
+      <a href="https://github.com/izzyallen876" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:israel.l.allen.28@dartmouth.edu">Email</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/js/glyph.js"></script>
+<script src="assets/js/scene-hands.js"></script>
+<script src="assets/js/core.js"></script>
+</body>
+</html>
