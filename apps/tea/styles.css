@@ -1,0 +1,81 @@
+*{box-sizing:border-box}
+:root{
+  --bg:#0b0f12; --card:#11161b; --text:#ecf0f3; --muted:#aab3bd; --accent:#4da6ff; --accent-2:#88ffcc; --danger:#ff5c5c; --success:#7cff88;
+  --ring:#4da6ff;
+}
+:root.light{
+  --bg:#f7f9fb; --card:#ffffff; --text:#161a1d; --muted:#5c6773; --accent:#0b63ff; --accent-2:#0fb; --danger:#e23; --success:#0b4;
+  --ring:#0b63ff;
+}
+body{
+  margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:radial-gradient(1200px 600px at 10% -10%, rgba(13,80,120,.35), transparent),
+             radial-gradient(1200px 600px at 100% 10%, rgba(10,120,90,.25), transparent),
+             linear-gradient(115deg, #0b0f12, #0c1116 40%, #0a141b);
+  color:var(--text); min-height:100vh; display:flex; flex-direction:column;
+}
+.app-header, .app-footer{
+  display:flex; align-items:center; justify-content:space-between; padding:16px 20px; background:transparent;
+}
+.brand{display:flex; align-items:center; gap:10px}
+.logo{width:28px; height:28px; filter:drop-shadow(0 2px 6px rgba(0,0,0,.3))}
+main{width:min(1100px, 95vw); margin:10px auto 40px; display:grid; gap:16px}
+.card{
+  background:var(--card); border-radius:16px; padding:16px; box-shadow:0 8px 24px rgba(0,0,0,.25);
+  border:1px solid rgba(255,255,255,.06); position:relative; overflow:hidden;
+}
+.card::after{
+  content:''; position:absolute; inset:auto -30% -60% -30%; height:120px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.05), transparent);
+  transform:translateX(-200%); animation:shine 10s linear infinite;
+}
+@keyframes shine{ to{ transform:translateX(200%);} }
+.controls-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px}
+@media (max-width: 900px){.controls-grid{grid-template-columns:1fr}}
+h2,h3{margin-top:0}
+.row{display:flex; align-items:center}
+.space-between{justify-content:space-between}
+.align-center{align-items:center}
+.wrap{flex-wrap:wrap}
+.gap{gap:10px}
+.mt{margin-top:10px}
+.grid-2{display:grid; grid-template-columns:1fr 1fr}
+.grid-2 label{display:flex; flex-direction:column; gap:6px}
+input, select, button, textarea{
+  font:inherit; color:var(--text); background:#0e1318; border:1px solid rgba(255,255,255,.08); border-radius:10px; padding:10px 12px;
+  transition:transform .08s ease, box-shadow .2s ease, background .2s ease;
+}
+:root.light input, :root.light select, :root.light button, :root.light textarea{background:#f0f4f8; border:1px solid #e2e8f0; color:#161a1d}
+.btn{cursor:pointer; border:1px solid transparent; background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));}
+.btn:hover{transform:translateY(-1px); box-shadow:0 4px 12px rgba(0,0,0,.25)}
+.btn:active{transform:translateY(0)}
+.btn.ghost{background:transparent; border-color:rgba(255,255,255,.15)}
+.btn.danger{background:transparent; border-color:var(--danger); color:var(--danger)}
+.btn.success{border-color:var(--success); color:var(--success)}
+.muted{color:var(--muted)}
+.timer-card .timer-visual{display:grid; place-items:center; position:relative; margin:8px 0}
+.progress-ring{width:180px; height:180px; transform:rotate(-90deg)}
+.ring-bg{stroke:rgba(255,255,255,.15)}
+.ring{stroke:var(--ring); stroke-dasharray:339.292; stroke-dashoffset:0; transition:stroke-dashoffset .3s linear}
+.timer-display{
+  position:absolute; text-align:center; transform:translateY(4px);
+}
+.timer-display #time-remaining{font-size:36px; font-weight:800; letter-spacing:0.5px}
+.timer-display #infusion-label{font-size:12px; color:var(--muted); margin-top:2px}
+table{width:100%; border-collapse:collapse; overflow:hidden; border-radius:12px}
+thead{background:rgba(255,255,255,.05)}
+th,td{padding:10px; border-bottom:1px dashed rgba(255,255,255,.08)}
+tbody tr:hover{background:rgba(255,255,255,.03)}
+kbd{background:#222; padding:2px 6px; border-radius:6px; border:1px solid rgba(255,255,255,.15); font-size:12px}
+.header-actions{display:flex; gap:10px; align-items:center}
+#github-link, #share-link{padding:8px 12px}
+.fade-in{animation:fadeIn .5s ease both}
+.pop{animation:popIn .4s ease both}
+.pulse{animation:pulse 2s ease-in-out infinite}
+@keyframes fadeIn{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:translateY(0)}}
+@keyframes popIn{from{opacity:0; transform:scale(.98)} to{opacity:1; transform:scale(1)}}
+@keyframes pulse{0%{filter:drop-shadow(0 0 0 rgba(77,166,255,.0))}
+50%{filter:drop-shadow(0 0 16px rgba(77,166,255,.25))}
+100%{filter:drop-shadow(0 0 0 rgba(77,166,255,.0))}}
+.log-item{padding:8px 10px; border:1px dashed rgba(255,255,255,.12); border-radius:10px; margin:6px 0; animation:fadeIn .3s ease both}
+.note-cell{outline:none}
+.note-cell:focus{background:rgba(255,255,255,.04)}

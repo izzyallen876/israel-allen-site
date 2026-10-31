@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gongfu Tea Timer | Israel Allen</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <img src="tea.svg" alt="" class="logo"/>
+      <h1>Gongfu Tea Timer</h1>
+    </div>
+    <div class="header-actions">
+      <button id="toggle-theme" aria-label="Toggle theme" class="btn ghost">🌓</button>
+      <a id="share-link" class="btn ghost" title="Copy sharable link">Share</a>
+      <a id="github-link" class="btn ghost" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro card fade-in">
+      <h2>Steep like a pro</h2>
+      <p>
+        Brew tea the Gongfu way: short, repeated infusions that reveal evolving flavors.
+        Choose a preset or build your own infusion schedule. Your presets and notes are saved on this device.
+      </p>
+      <details>
+        <summary>What is Gongfu brewing?</summary>
+        <p>
+          Gongfu (工夫) uses a high leaf-to-water ratio, small vessels (gaiwan or yixing),
+          and multiple short steeps. Start short, increase gradually, taste each cup.
+        </p>
+      </details>
+    </section>
+
+    <section class="controls-grid">
+      <div class="card pop">
+        <h3>Preset</h3>
+        <select id="preset-select" aria-label="Tea preset"></select>
+        <div class="row gap wrap">
+          <button id="save-preset" class="btn">Save preset</button>
+          <button id="delete-preset" class="btn danger">Delete preset</button>
+          <button id="reset-presets" class="btn ghost">Reset to defaults</button>
+        </div>
+      </div>
+
+      <div class="card pop">
+        <h3>Infusion Plan</h3>
+        <div class="grid-2 gap">
+          <label>First steep (sec)
+            <input id="base-seconds" type="number" min="1" value="10"/>
+          </label>
+          <label>Increase rule
+            <select id="increase-rule">
+              <option value="fixed">+ fixed</option>
+              <option value="percent">+ %</option>
+              <option value="multiplier">× multiplier</option>
+            </select>
+          </label>
+          <label>Amount
+            <input id="increase-amount" type="number" step="0.1" value="2"/>
+          </label>
+          <label>Infusions
+            <input id="num-infusions" type="number" min="1" value="10"/>
+          </label>
+          <label>Rinses (0–2)
+            <input id="rinse-count" type="number" min="0" max="2" value="1"/>
+          </label>
+          <label>Sound
+            <select id="sound-type">
+              <option value="chime">Chime</option>
+              <option value="gong">Gong</option>
+              <option value="wood">Woodblock</option>
+              <option value="none">None</option>
+            </select>
+          </label>
+        </div>
+        <div class="row gap mt wrap">
+          <button id="generate" class="btn">Generate</button>
+          <button id="export-json" class="btn ghost">Export plan</button>
+          <input id="import-file" type="file" accept="application/json" hidden/>
+          <button id="import-json" class="btn ghost">Import plan</button>
+        </div>
+      </div>
+
+      <div class="card timer-card pop">
+        <h3>Timer</h3>
+        <div class="timer-visual pulse">
+          <svg viewBox="0 0 120 120" class="progress-ring" aria-hidden="true">
+            <circle class="ring-bg" cx="60" cy="60" r="54" stroke-width="8" fill="none" />
+            <circle class="ring" cx="60" cy="60" r="54" stroke-width="8" fill="none" stroke-linecap="round"/>
+          </svg>
+          <div class="timer-display">
+            <div id="time-remaining">00:10</div>
+            <div id="infusion-label">Infusion 1 / 10</div>
+          </div>
+        </div>
+
+        <div class="row gap mt wrap">
+          <button id="start" class="btn success">Start</button>
+          <button id="pause" class="btn">Pause</button>
+          <button id="reset" class="btn ghost">Reset</button>
+          <button id="next" class="btn">Next ▶</button>
+        </div>
+        <small class="muted">Keyboard: <kbd>Space</kbd> start/pause, <kbd>N</kbd> next, <kbd>R</kbd> reset · Swipe: ◀/▶ next, ▼ reset</small>
+      </div>
+    </section>
+
+    <section class="card pop">
+      <h3>Schedule</h3>
+      <table id="schedule-table">
+        <thead>
+          <tr>
+            <th>#</th><th>Time (sec)</th><th>Notes</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="card pop">
+      <div class="row space-between align-center">
+        <h3>Brew Log</h3>
+        <button id="export-csv" class="btn ghost">Export CSV</button>
+      </div>
+      <div id="log"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <span>Built by Israel Allen · MIT License</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

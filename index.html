@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Israel Allen</title>
 <meta name="description" content="Israel Allen studies Quantitative Social Science at Dartmouth and works with large-scale data, political violence research and medical machine learning. Jamaican national triathlon champion.">
-<meta name="theme-color" content="#020c06">
+<meta name="theme-color" content="#0a1450">
 <meta name="author" content="Israel Allen">
 <link rel="canonical" href="https://lukeanthony.co/">
 <meta property="og:type" content="website">
@@ -15,7 +15,7 @@
 <meta property="og:description" content="Israel Allen studies Quantitative Social Science at Dartmouth and works with large-scale data, political violence research and medical machine learning. Jamaican national triathlon champion.">
 <meta property="og:url" content="https://lukeanthony.co/">
 <meta property="og:image" content="https://lukeanthony.co/assets/img/og-card.jpg">
-<meta property="og:image:alt" content="The words israel allen in large type above a glowing green wireframe grid and a spinning crystal.">
+<meta property="og:image:alt" content="The words israel allen in large type under a red sun, with a road leading to a tower and a spinning crystal.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
@@ -26,10 +26,16 @@
 </script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="wave" x="-5%" y="-10%" width="110%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.006 0.022" numOctaves="2" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="14" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
 <a class="skip" href="#main">Skip to content</a>
 <div class="bar">
   <a class="brand" href="index.html">◆ israel allen</a>
-  <nav id="nav" aria-label="Main"><a href="about.html">about</a><a href="work.html">work</a><a href="resume.html">resume</a><a href="lab.html">lab</a><a href="film.html">film</a><a href="contact.html">contact</a></nav>
+  <nav id="nav" aria-label="Main"><a href="about.html">about</a><a href="work.html">work</a><a href="projects.html">projects</a><a href="resume.html">resume</a><a href="lab.html">lab</a><a href="film.html">film</a><a href="contact.html">contact</a></nav>
   <div class="tools">
     <button class="pill" id="term-btn" type="button" aria-label="Open the command console">&gt;_</button>
     <button class="pill" id="theme" type="button" aria-label="Switch between light and dark theme">theme</button>
@@ -39,7 +45,7 @@
 <main id="main">
 <header class="hero" id="top">
   <canvas id="grid" aria-hidden="true"></canvas>
-  <div class="plumbwrap"><canvas class="glyph" id="plumb" role="img" aria-label="A rotating green crystal drawn in text characters"></canvas></div>
+  <div class="plumbwrap"><canvas class="glyph" id="plumb" role="img" aria-label="A rotating red and gold crystal drawn in text characters, in front of a red sun"></canvas></div>
   <div class="titleblock">
     <h1 id="title" data-scramble aria-label="Israel Allen">israel
 allen</h1>
@@ -50,37 +56,41 @@ allen</h1>
       <a class="btn" href="resume.html">Read my resume</a>
     </div>
   </div>
-  <div class="ticker" aria-hidden="true"><span>◆ data ░▒▓ python ░▒▓ r ░▒▓ aws ░▒▓ political violence research ░▒▓ medical ml ░▒▓ public history ░▒▓ triathlon ░▒▓ dartmouth 2028 ░▒▓ ◆ data ░▒▓ python ░▒▓ r ░▒▓ aws ░▒▓ political violence research ░▒▓ medical ml ░▒▓ public history ░▒▓ triathlon ░▒▓ dartmouth 2028 ░▒▓ </span></div>
+  <div class="ticker" aria-hidden="true"><span>★ data ★ python ★ r ★ aws ★ machine learning ★ medical ai ★ political violence research ★ public history ★ triathlon ★ dartmouth 2028 ★ data ★ python ★ r ★ aws ★ machine learning ★ medical ai ★ political violence research ★ public history ★ triathlon ★ dartmouth 2028 ★ </span></div>
 </header>
 
 <section class="sec" id="rooms">
   <div class="inner">
     <h2>This is my corner of the grid.</h2>
-    <p class="lead">My research, my resume and the things I make out of text and light all live here. Pick a room.</p>
+    <p class="lead">My research, my projects and the things I make out of text and light all live here. Pick a pack.</p>
     <div class="rooms">
       <a class="room dbox lock" data-id="ROOM_01 / ABOUT" data-tilt style="--i:0" href="about.html">
-        <span class="art" style="background-image:url(assets/img/kabuto-poster.jpg)" aria-hidden="true"></span>
-        <h3>About</h3><p>Who I am, what I study, and what I do off the clock.</p>
+        <span class="art px" aria-hidden="true"></span><span class="chip" aria-hidden="true">01</span>
+        <div class="pane"><h3>About</h3><p>Who I am, what I study, and what I do off the clock.</p></div>
       </a>
       <a class="room dbox lock" data-id="ROOM_02 / WORK" data-tilt style="--i:1" href="work.html">
-        <span class="art" style="background-image:url(assets/img/thermal-street.jpg)" aria-hidden="true"></span>
-        <h3>Work</h3><p>Four research roles, from political violence data to medical machine learning. Scrub the timeline.</p>
+        <span class="art dots" aria-hidden="true"></span><span class="chip" aria-hidden="true">02</span>
+        <div class="pane"><h3>Work</h3><p>Four research roles and an athletics record on one timeline. Filter it, zoom it, scrub it.</p></div>
       </a>
-      <a class="room dbox lock" data-id="ROOM_03 / RESUME" data-tilt style="--i:2" href="resume.html">
-        <span class="art sheet" aria-hidden="true"></span>
-        <h3>Resume</h3><p>One page, right in the browser. Print it or save it as a PDF.</p>
+      <a class="room dbox lock" data-id="ROOM_03 / PROJECTS" data-tilt style="--i:2" href="projects.html">
+        <span class="art zig" aria-hidden="true"></span><span class="chip" aria-hidden="true">03</span>
+        <div class="pane"><h3>Projects</h3><p>A studio, a site written by hand, and things I built to learn.</p></div>
       </a>
-      <a class="room dbox lock" data-id="ROOM_04 / LAB" data-tilt style="--i:3" href="lab.html">
-        <span class="art" style="background-image:url(assets/img/pixel-portrait.jpg)" aria-hidden="true"></span>
-        <h3>Lab</h3><p>Three things in real 3D that you can drag around.</p>
+      <a class="room dbox lock" data-id="ROOM_04 / RESUME" data-tilt style="--i:3" href="resume.html">
+        <span class="art sheet" aria-hidden="true"></span><span class="chip" aria-hidden="true">04</span>
+        <div class="pane"><h3>Resume</h3><p>One page, right in the browser. Print it or save it as a PDF.</p></div>
       </a>
-      <a class="room dbox lock" data-id="ROOM_05 / FILM" data-tilt style="--i:4" href="film.html">
-        <span class="art" style="background-image:url(assets/img/film-poster.jpg)" aria-hidden="true"></span>
-        <h3>Film</h3><p>A 38-second short made entirely of text. Sound is optional.</p>
+      <a class="room dbox lock" data-id="ROOM_05 / LAB" data-tilt style="--i:4" href="lab.html">
+        <span class="art stars" aria-hidden="true"></span><span class="chip" aria-hidden="true">05</span>
+        <div class="pane"><h3>Lab</h3><p>Real 3D you can drag around, and a tiny neural network you can train yourself.</p></div>
       </a>
-      <a class="room dbox lock" data-id="ROOM_06 / CONTACT" data-tilt style="--i:5" href="contact.html">
-        <span class="art spark" aria-hidden="true"></span>
-        <h3>Contact</h3><p>Email, GitHub, LinkedIn, or write a message right on the page.</p>
+      <a class="room dbox lock" data-id="ROOM_06 / FILM" data-tilt style="--i:5" href="film.html">
+        <span class="art film" aria-hidden="true"></span><span class="chip" aria-hidden="true">06</span>
+        <div class="pane"><h3>Film</h3><p>A 38-second short made entirely of text. Sound is optional.</p></div>
+      </a>
+      <a class="room dbox lock" data-id="ROOM_07 / CONTACT" data-tilt style="--i:6" href="contact.html">
+        <span class="art spark" aria-hidden="true"></span><span class="chip" aria-hidden="true">07</span>
+        <div class="pane"><h3>Contact</h3><p>Email, GitHub, LinkedIn, or write a message right on the page.</p></div>
       </a>
     </div>
   </div>
@@ -94,6 +104,22 @@ allen</h1>
       <div class="num"><b data-count data-final="8,000+">8,000+</b><span>drone-strike events curated and classified for causal inference research</span></div>
       <div class="num"><b data-count data-final="28,943">28,943</b><span>visual-field tests in the public dataset behind a study I reproduced</span></div>
       <div class="num"><b data-count data-final="2×">2×</b><span>Jamaica National Triathlon Champion, in 2022 and 2023</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="ml" style="padding-top:0">
+  <div class="inner">
+    <h2>Machine learning, close up</h2>
+    <p class="lead">I work on the parts of ML that have to be right: the data going in, the pipeline in the middle and the words a model learns from.</p>
+    <div class="facts">
+      <div class="fact dbox lock" data-id="ML_01 / REPRODUCE" style="--i:0"><small>Chuter Lab, Dartmouth-Hitchcock</small><span>I reproduced the full output pipeline of an ophthalmology ML study and audited its tables and figures against the source CSVs.</span></div>
+      <div class="fact dbox lock" data-id="ML_02 / TEACH" style="--i:1"><small>Evergreen AI, Geisel School of Medicine</small><span>I author and review clinical training dialogues for a medical AI model.</span></div>
+      <div class="fact dbox lock" data-id="ML_03 / SCALE" style="--i:2"><small>Political Violence FieldLab</small><span>I built event datasets and processed 1B+ device pings with AWS, PySpark and GeoPandas for causal inference work.</span></div>
+    </div>
+    <div class="cta">
+      <a class="btn solid" href="lab.html#ml">Train a tiny neural network</a>
+      <a class="btn" href="work.html">See it on the timeline</a>
     </div>
   </div>
 </section>

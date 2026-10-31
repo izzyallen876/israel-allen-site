@@ -1,15 +1,15 @@
 # Israel Allen, personal site
 
-Live at **https://lukeanthony.co**. A hand-written, multi-page, static site: a home page with a text-drawn crystal, About, Work (with an interactive timeline), Resume, a 3D Lab, a 38-second ASCII film and Contact. No frameworks, no libraries, no build step, no cookies and no analytics.
+Live at **https://lukeanthony.co**. A hand-written, multi-page, static site: a home page with a code-drawn sky, sun, road and tower and a text-drawn crystal, About, Work (an experience timeline with lanes, filters and a zoom), Projects, Resume, a Lab (three raw-WebGL scenes and a small neural network that trains in the page), a 38-second ASCII film, a gongfu tea timer and Contact. No frameworks, no libraries, no build step, no cookies and no analytics.
 
 ## What's here
 
 | Path | What it is |
 | --- | --- |
-| `index.html`, `about.html`, `work.html`, `resume.html`, `lab.html`, `film.html`, `contact.html` | The pages |
+| `index.html`, `about.html`, `work.html`, `projects.html`, `resume.html`, `lab.html`, `film.html`, `contact.html` | The pages |
 | `privacy.html`, `terms.html`, `accessibility.html`, `credits.html` | The legal and information pages (also as `.md` files) |
 | `assets/css/` | Styles (`site.css` for the site, `film.css` for the film) |
-| `assets/js/` | `core.js` (theme, menu, console), `glyph.js` and `scene-*.js` (the text art), `lab3d.js` (WebGL), `work.js` (timeline), `film.js` |
+| `assets/js/` | `core.js` (theme, menu, console), `glyph.js` and `scene-*.js` (the text art), `lab3d.js` (WebGL), `work.js` (timeline), `scene-ml.js` (the neural network), `film.js` |
 | `assets/img/` | Images and icons |
 | `assets/Israel_Allen_Resume.pdf` | The downloadable resume |
 | `CNAME`, `.nojekyll`, `robots.txt`, `sitemap.xml`, `404.html` | Publishing files |

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Work | Israel Allen</title>
 <meta name="description" content="Research experience: Chuter Lab (ophthalmology ML), Evergreen AI (clinical AI), Historical Accountability Student Research Program and the Political Violence FieldLab.">
-<meta name="theme-color" content="#020c06">
+<meta name="theme-color" content="#0a1450">
 <meta name="author" content="Israel Allen">
 <link rel="canonical" href="https://lukeanthony.co/work.html">
 <meta property="og:type" content="website">
@@ -15,7 +15,7 @@
 <meta property="og:description" content="Research experience: Chuter Lab (ophthalmology ML), Evergreen AI (clinical AI), Historical Accountability Student Research Program and the Political Violence FieldLab.">
 <meta property="og:url" content="https://lukeanthony.co/work.html">
 <meta property="og:image" content="https://lukeanthony.co/assets/img/og-card.jpg">
-<meta property="og:image:alt" content="The words israel allen in large type above a glowing green wireframe grid and a spinning crystal.">
+<meta property="og:image:alt" content="The words israel allen in large type under a red sun, with a road leading to a tower and a spinning crystal.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
@@ -26,7 +26,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <div class="bar">
   <a class="brand" href="index.html">◆ israel allen</a>
-  <nav id="nav" aria-label="Main"><a href="about.html">about</a><a href="work.html" aria-current="page">work</a><a href="resume.html">resume</a><a href="lab.html">lab</a><a href="film.html">film</a><a href="contact.html">contact</a></nav>
+  <nav id="nav" aria-label="Main"><a href="about.html">about</a><a href="work.html" aria-current="page">work</a><a href="projects.html">projects</a><a href="resume.html">resume</a><a href="lab.html">lab</a><a href="film.html">film</a><a href="contact.html">contact</a></nav>
   <div class="tools">
     <button class="pill" id="term-btn" type="button" aria-label="Open the command console">&gt;_</button>
     <button class="pill" id="theme" type="button" aria-label="Switch between light and dark theme">theme</button>
@@ -37,50 +37,72 @@
 <section class="phead">
   <div class="inner">
     <h1 data-scramble aria-label="Work">work</h1>
-    <p class="lead">Four research roles since late 2024, across political violence data, medical machine learning and public history. Drag the marker to see what I was working on at any date.</p>
+    <p class="lead">Four research roles since late 2024, across political violence data, medical machine learning and public history, next to a national athletics record. Filter by topic, zoom out to see the whole span, or drag the marker to see what I was doing on any date.</p>
   </div>
 </section>
 
 <section class="sec" style="padding-top:10px" id="timeline">
   <div class="inner">
     <div class="tl" id="tl">
-      <div class="tl-axis"><span></span><div id="tl-axis-track"></div></div>
-      <div class="tl-body" id="tl-body" style="--p:1">
-        <div id="tl-rows" style="display:grid;gap:10px"></div>
-        <div class="tl-head" aria-hidden="true"></div>
-        <input type="range" id="tl-range" aria-label="Choose a date on the timeline">
+      <div class="tl-top">
+        <div class="chips" id="tl-filters" role="group" aria-label="Filter by topic">
+          <small>show</small>
+          <button class="chip-btn" type="button" data-f="all" aria-pressed="true">everything</button>
+          <button class="chip-btn" type="button" data-f="ml" aria-pressed="false">ML &amp; AI</button>
+          <button class="chip-btn" type="button" data-f="data" aria-pressed="false">data</button>
+          <button class="chip-btn" type="button" data-f="history" aria-pressed="false">history</button>
+          <button class="chip-btn" type="button" data-f="sport" aria-pressed="false">sport</button>
+        </div>
+        <div class="chips" id="tl-zoom" role="group" aria-label="Time range">
+          <small>range</small>
+          <button class="chip-btn" type="button" data-z="research" aria-pressed="true">research years</button>
+          <button class="chip-btn" type="button" data-z="all" aria-pressed="false">2017 to 2028</button>
+        </div>
+      </div>
+      <div class="tl-board">
+        <div class="tl-axis"><span></span><div id="tl-axis-track"></div></div>
+        <div class="tl-body" id="tl-body" style="--p:1">
+          <div id="tl-rows" style="display:grid;gap:6px"></div>
+          <div class="tl-today" aria-hidden="true"></div>
+          <div class="tl-head" aria-hidden="true"></div>
+          <input type="range" id="tl-range" aria-label="Choose a date on the timeline">
+        </div>
       </div>
       <p class="tl-read" id="tl-read" aria-live="polite"></p>
       <div class="tl-ctl">
-        <button class="btn" id="tl-play" type="button">Play it through</button>
+        <button class="btn solid" id="tl-play" type="button">Play it through</button>
         <button class="btn" id="tl-now" type="button">Jump to today</button>
       </div>
+      <div class="tl-tip" id="tl-tip" hidden></div>
     </div>
     <div class="roles">
-<article class="role dbox lock" data-id="ROLE_01 / CHUTER_LAB" data-role="chuter" style="--i:0">
+<article class="role dbox lock" data-id="ROLE_01 / CHUTER_LAB" data-role="chuter" data-tags="ml data" style="--i:0">
   <div class="role-head"><h2>Research Assistant</h2><span class="when">August 2026 to now</span></div>
   <p class="org">Chuter Lab, Dartmouth-Hitchcock Medical, Lebanon, NH</p>
   <ul>
 <li>Reproduced the full output pipeline of an ophthalmology machine-learning study built on a public dataset of 28,943 visual-field tests.</li>
 <li>Audited the manuscript’s tables and figures against source CSVs and captions, flagged differences and labeling mismatches, and compiled reports for the PI.</li>
   </ul>
+  <ul class="tags"><li>machine learning</li><li>reproducibility</li><li>manuscript audit</li></ul>
 </article>
-<article class="role dbox lock" data-id="ROLE_02 / EVERGREEN_AI" data-role="evergreen" style="--i:1">
+<article class="role dbox lock" data-id="ROLE_02 / EVERGREEN_AI" data-role="evergreen" data-tags="ml" style="--i:1">
   <div class="role-head"><h2>AI Project Assistant</h2><span class="when">May 2026 to now</span></div>
   <p class="org">Evergreen AI, Geisel School of Medicine, Hanover, NH</p>
   <ul>
 <li>Authored and reviewed clinical training dialogues for a medical AI model after structured training in clinical and medical source material.</li>
   </ul>
+  <ul class="tags"><li>medical AI</li><li>clinical dialogues</li></ul>
 </article>
-<article class="role dbox lock" data-id="ROLE_03 / HASRP" data-role="hasrp" style="--i:2">
+<article class="role dbox lock" data-id="ROLE_03 / HASRP" data-role="hasrp" data-tags="history" style="--i:2">
   <div class="role-head"><h2>Research Associate</h2><span class="when">May to August 2026</span></div>
   <p class="org">Historical Accountability Student Research Program, Dartmouth College</p>
   <ul>
 <li>Awarded one of four funded, full-time research fellowships each year to investigate a century of racial equity at Dartmouth from primary sources.</li>
 <li>Published the findings as a public article on the Rauner Library blog, presented them at the public reception and curated a digital exhibit.</li>
   </ul>
+  <ul class="tags"><li>primary sources</li><li>public writing</li><li>digital exhibit</li></ul>
 </article>
-<article class="role dbox lock" data-id="ROLE_04 / FIELDLAB" data-role="fieldlab" style="--i:3">
+<article class="role dbox lock" data-id="ROLE_04 / FIELDLAB" data-role="fieldlab" data-tags="data" style="--i:3">
   <div class="role-head"><h2>Research Associate</h2><span class="when">December 2024 to December 2025</span></div>
   <p class="org">Political Violence FieldLab, Dartmouth College, Hanover, NH</p>
   <ul>
@@ -89,6 +111,7 @@
 <li>Curated and classified 8,000+ drone-strike events to support causal inference models for faculty-led research.</li>
 <li>Applied regex queries and geocoding tools to match drone-strike events with precise cell-tower locations, ensuring high data accuracy.</li>
   </ul>
+  <ul class="tags"><li>Python</li><li>R</li><li>AWS S3 and Athena</li><li>PySpark</li><li>Pandas</li><li>GeoPandas</li><li>regex</li><li>geocoding</li></ul>
 </article>
     </div>
   </div>

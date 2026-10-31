@@ -124,7 +124,7 @@ if (comp) {
 }
 
 /* ---------- command console ---------- */
-var PAGES = { home: 'index.html', about: 'about.html', work: 'work.html', resume: 'resume.html', lab: 'lab.html', film: 'film.html', contact: 'contact.html', privacy: 'privacy.html', terms: 'terms.html', accessibility: 'accessibility.html', credits: 'credits.html' };
+var PAGES = { home: 'index.html', about: 'about.html', work: 'work.html', projects: 'projects.html', resume: 'resume.html', lab: 'lab.html', film: 'film.html', contact: 'contact.html', privacy: 'privacy.html', terms: 'terms.html', accessibility: 'accessibility.html', credits: 'credits.html' };
 var term = document.createElement('div');
 term.id = 'term'; term.hidden = true;
 term.innerHTML = '<div class="term-box" role="dialog" aria-modal="true" aria-label="Command console">' +
@@ -145,7 +145,7 @@ function closeTerm() { term.hidden = true; tin.blur(); if (lastFocus && lastFocu
 function go(page) { say('opening ' + page + '...', 'd'); setTimeout(function () { window.location.href = PAGES[page]; }, 220); }
 function ext(url) { window.open(url, '_blank', 'noopener'); }
 var CMDS = {
-  help: function () { say('about  work  resume  lab  film  contact  home\nprivacy  terms  accessibility  credits\nemail  github  linkedin  theme  whoami  ls  clear  exit\ntry: open lab', 'e'); },
+  help: function () { say('about  work  projects  resume  lab  film  contact  home\nprivacy  terms  accessibility  credits\nemail  github  linkedin  theme  whoami  ls  clear  exit\ntry: open lab', 'e'); },
   ls: function () { say(Object.keys(PAGES).join('   '), 'e'); },
   whoami: function () { say('israel allen. quantitative social science, dartmouth class of 2028. national triathlete, jamaica.', 'e'); },
   email: function () { say('opening your email app...', 'd'); window.location.href = 'mailto:' + EMAIL; },
