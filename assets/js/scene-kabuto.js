@@ -312,7 +312,7 @@ function renderKabuto(t, ts){
     if(ink){ S.R[ci] = 10; S.G[ci] = 10; S.B[ci] = 60 + tw*80; }
     else { S.R[ci] = 80 + tw*100; S.G[ci] = 150 + tw*80; S.B[ci] = 255; }
   }
-  S.draw(ink ? '#e6dec0' : '#02030a', ink ? 0 : .6, ink ? 0 : .5);
+  S.draw(ink ? '#d3cfcf' : '#02030a', ink ? 0 : .6, ink ? 0 : .5);
 }
 
 /* helmet controls and head tracking */

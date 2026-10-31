@@ -26,7 +26,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <div class="bar">
   <a class="brand" href="index.html">◆ israel allen</a>
-  <nav id="nav" aria-label="Main"><a href="about.html">about</a><a href="work.html">work</a><a href="projects.html">projects</a><a href="resume.html">resume</a><a href="lab.html" aria-current="page">lab</a><a href="film.html">film</a><a href="contact.html">contact</a></nav>
+  <nav id="nav" aria-label="Main"><a href="about.html">about</a><a href="work.html">work</a><a href="resume.html">resume</a><a href="lab.html" aria-current="page">lab</a><a href="film.html">film</a><a href="contact.html">contact</a></nav>
   <div class="tools">
     <button class="pill" id="term-btn" type="button" aria-label="Open the command console">&gt;_</button>
     <button class="pill" id="theme" type="button" aria-label="Switch between light and dark theme">theme</button>
@@ -37,7 +37,7 @@
 <section class="phead">
   <div class="inner">
     <h1 data-scramble aria-label="Lab">lab</h1>
-    <p class="lead">Three small things in real 3D, written from scratch in WebGL with no libraries, and one tiny neural network you can train yourself. Drag to orbit. Tab to a scene and use the arrow keys if you prefer the keyboard.</p>
+    <p class="lead">Three small things in real 3D, written from scratch in WebGL with no libraries. Drag to orbit. Tab to a scene and use the arrow keys if you prefer the keyboard.</p>
   </div>
 </section>
 
@@ -89,7 +89,7 @@
     <div class="spec-head">
       <p class="spec-id">SPECIMEN_03</p>
       <h2 id="h-crystal">The crystal, unrendered</h2>
-      <p>A cousin of the crystal on the home page, this time as real geometry over a scrolling grid. Change how many sides it has and watch the reflection follow.</p>
+      <p>The spinning crystal from the home page, this time as real geometry over a scrolling grid. Change how many sides it has and watch the reflection follow.</p>
     </div>
     <div class="viewport" id="vp-crystal">
       <canvas id="gl-crystal" tabindex="0" role="img" aria-label="A glowing green crystal spinning above a scrolling grid, with its reflection below. Drag to orbit."></canvas>
@@ -104,42 +104,6 @@
   </div>
 </section>
 
-<section class="spec" id="ml" aria-labelledby="h-ml">
-  <div class="inner">
-    <div class="spec-head">
-      <p class="spec-id">SPECIMEN_04</p>
-      <h2 id="h-ml">Train a tiny neural network</h2>
-      <p>A small network written from scratch in JavaScript, with no libraries. Click the board to add points of two colours, or load a shape, then press Train and watch it bend a boundary between them. This is a toy for seeing how a classifier learns. It is not part of my research.</p>
-    </div>
-    <div class="mlbox">
-      <div class="mlcanvas"><canvas id="ml-canvas" role="img" aria-label="A square board of points in two colours with a coloured map showing what the network predicts. Click to add a point. Use the buttons beside it to load shapes and train."></canvas></div>
-      <div class="mlpanel">
-        <div class="ctl" role="group" aria-label="Load a shape">
-          <button type="button" data-set="blobs">Blobs</button>
-          <button type="button" data-set="moons">Moons</button>
-          <button type="button" data-set="circles">Circles</button>
-          <button type="button" data-set="spiral">Spiral</button>
-          <button type="button" data-set="xor">XOR</button>
-        </div>
-        <div class="ctl" role="group" aria-label="Colour of the point you add">
-          <button type="button" id="ml-a" aria-pressed="true">Add blue</button>
-          <button type="button" id="ml-b" aria-pressed="false">Add red</button>
-          <button type="button" id="ml-rand">Add 10 random</button>
-        </div>
-        <label>Hidden units <input id="ml-h" type="range" min="2" max="16" step="1" value="8"> <span id="ml-h-out">8</span></label>
-        <label>Learning rate <input id="ml-lr" type="range" min="1" max="30" step="1" value="8"> <span id="ml-lr-out">0.04</span></label>
-        <div class="ctl" role="group" aria-label="Training controls">
-          <button type="button" id="ml-train" aria-pressed="false">Train</button>
-          <button type="button" id="ml-reset">Reset network</button>
-          <button type="button" id="ml-clear">Clear points</button>
-        </div>
-        <p class="mlstats" id="ml-stats">Load a shape to begin.</p>
-        <p class="sr" id="ml-live" role="status" aria-live="polite"></p>
-        <p class="mlkey"><span><i style="background:#3550e8"></i>blue class</span><span><i style="background:#e8341c"></i>red class</span></p>
-      </div>
-    </div>
-  </div>
-</section>
 <p class="lab-note">Keyboard: tab to a scene, then use the arrow keys to orbit, + and − to zoom and 0 to reset. The two images are shown as artwork, and their status is explained on the <a href="credits.html">credits page</a>.</p>
 </main>
 <footer class="site">
@@ -156,7 +120,6 @@
   </div>
 </footer>
 <script src="assets/js/lab3d.js"></script>
-<script src="assets/js/scene-ml.js"></script>
 <script src="assets/js/core.js"></script>
 </body>
 </html>
